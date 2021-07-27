@@ -22,10 +22,10 @@ class StormIndicator(object):
 
     def __init__(self):
 
-        self.app = appindicator.Indicator(
+        self.app = appindicator.Indicator.new(
             "storm-ssh-indicator",
             "gnome-netstatus-tx",
-            appindicator.IndicatorCategory.APPLICATION_STATUS
+            3
         )
 
         self.app.set_status(appindicator.STATUS_ACTIVE)
