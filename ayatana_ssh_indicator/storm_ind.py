@@ -25,7 +25,7 @@ class StormIndicator(object):
         self.app = appindicator.Indicator(
             "storm-ssh-indicator",
             "gnome-netstatus-tx",
-            appindicator.CATEGORY_APPLICATION_STATUS
+            appindicator.IndicatorCategory.APPLICATION_STATUS
         )
 
         self.app.set_status(appindicator.STATUS_ACTIVE)
