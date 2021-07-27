@@ -28,7 +28,7 @@ class StormIndicator(object):
             3
         )
 
-        self.app.set_status(appindicator.STATUS_ACTIVE)
+        self.app.set_status(appindicator.IndicatorStatus.ACTIVE)
 
         self.menu = Gtk.Menu()
 
