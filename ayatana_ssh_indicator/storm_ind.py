@@ -12,6 +12,12 @@ from gi import require_version
 
 from subprocess import Popen
 
+require_version('AyatanaAppIndicator3', '0.1')
+require_version('Gtk', '3.0')
+
+from gi.repository import Gtk, GObject
+from gi.repository import AyatanaAppIndicator3 as appindicator
+
 class StormIndicator(object):
 
     def __init__(self):
