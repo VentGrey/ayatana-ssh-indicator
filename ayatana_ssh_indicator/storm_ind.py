@@ -1,9 +1,14 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+#
 
-import gobject
-import gtk
-import appindicator
+# import gobject
+# import gtk
+# import appindicator
 import os
 import sys
+
+from gi import require_version
 
 from subprocess import Popen
 
