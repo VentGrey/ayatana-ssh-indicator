@@ -2,21 +2,19 @@
 # -*- coding: utf-8 -*-
 #
 
-# import gobject
-# import gtk
-# import appindicator
+
 import os
+from subprocess import Popen
 import sys
 
-from gi import require_version
+from gi.repository import Gtk, GObject
+from gi.repository import AyatanaAppIndicator3 as appindicator
 
-from subprocess import Popen
+from gi import require_version
 
 require_version('AyatanaAppIndicator3', '0.1')
 require_version('Gtk', '3.0')
 
-from gi.repository import Gtk, GObject
-from gi.repository import AyatanaAppIndicator3 as appindicator
 
 class StormIndicator(object):
 
