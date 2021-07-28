@@ -7,14 +7,13 @@ import os
 from subprocess import Popen
 import sys
 
-from gi.repository import Gtk, GObject
-from gi.repository import AyatanaAppIndicator3 as appindicator
-
 from gi import require_version
 
 require_version('AyatanaAppIndicator3', '0.1')
 require_version('Gtk', '3.0')
 
+from gi.repository import Gtk, GObject
+from gi.repository import AyatanaAppIndicator3 as appindicator
 
 class StormIndicator(object):
 
@@ -67,8 +66,8 @@ class StormIndicator(object):
         if error:
             icon = Gtk.MESSAGE_ERROR
         else:
-            icon = Gtk.MESSAGE_INFO
-        md = Gtk.MessageDialog(None, 0, icon, Gtk.BUTTONS_OK)
+            icon = "dialog-info"
+        md = Gtk.MessageDialog(None, 0, icon, Gtk.ButtonsType(1))
         try:
             md.set_markup("<b>storm-indicator</b>")
             md.format_secondary_markup(message)
